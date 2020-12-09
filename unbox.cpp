@@ -4,8 +4,20 @@
 #include <fstream>
 using namespace std;
 
+enum Rarity { Common, Uncommon, Rare, Ultra Rare };
+enum Size   { Tiny, Small, Medium, Large, Huge };
+
+struct mini
+{
+  int num;
+  string name;
+  Rarity r;
+  Size s;
+};
+
 int main ()
 {
+  int count = 0;      // Number of minis in the set
   string set;
   string mini[4];
   std::ofstream out;
